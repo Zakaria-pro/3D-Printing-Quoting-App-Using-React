@@ -1,0 +1,24 @@
+.image-container {
+  border-bottom: 1px solid #d0d7dd;
+  background-color: #000000;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .image-container {
+    border-bottom: 0px;
+    border-right: 1px solid #d0d7dd;
+    /* background-color: bisque; */
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    flex: 1.2;
+  }
+}
+
+/* .image {
+  border: 1px solid #d0d7dd;
+} */

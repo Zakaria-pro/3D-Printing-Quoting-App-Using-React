@@ -1,3 +1,10 @@
+.page-background {
+  background-color: #1e252f;
+  background-image: url(../../assets/Shiny\ Overlay.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .App-container {
   width: 80%;
   margin-left: auto;
@@ -121,4 +128,8 @@
 .canvas-container {
   width: 50%;
   height: 80vh;
+}
+
+.quote-background {
+  background-color: #eaeaea;
 }

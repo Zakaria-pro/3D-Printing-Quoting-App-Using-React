@@ -1,0 +1,16 @@
+.quote-container {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .quote-container {
+    flex-direction: row;
+  }
+}

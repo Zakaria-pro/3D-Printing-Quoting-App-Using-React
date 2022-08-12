@@ -1,0 +1,32 @@
+/* .quotes-container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.quotes-container {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .quotes-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+hr.solid {
+  border-top: 3px solid #646a7294;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  /* border-radius: 16px; */
+}
+
+h1 {
+  font-size: x-large;
+  color: #646a72;
+}
