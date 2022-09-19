@@ -1,0 +1,29 @@
+// colors
+$backgroundColor: #282c34;
+$bestFontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+
+body {
+  margin: 0;
+  background-color: $backgroundColor;
+  font-family: $bestFontFamily;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+$backgroundColor: #1e252f;
+
+/* Buttons */
+// Primary
+$primaryButtonBackground: white;
+$primaryButtonTextColor: #282c34;
+
+// Secondary
+$secondaryButtonBackground: #282c34;
+$secondaryButtonTextColor: white;

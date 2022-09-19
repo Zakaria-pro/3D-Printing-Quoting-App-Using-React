@@ -10,7 +10,7 @@ function Quote(props) {
   return (
     <div className="quote-container">
       {/* (Stateless - Presentative - DOM) Componenet */}
-      <QuoteImage quoteFile={quoteFile} />
+      <QuoteImage quoteModel={props.quoteInfo.model} />
       <QuoteInfo quoteInfo={props.quoteInfo} />
 
       {/* (Statefull - Smart) Componenet */}

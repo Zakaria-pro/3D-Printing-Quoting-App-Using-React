@@ -7,7 +7,7 @@ function QuoteImage(props) {
       {/* <CanvasComponent quoteFile={props.quoteFile} /> */}
       <img
         className="image"
-        src={props.quoteImage}
+        src={props.quoteModel}
         width="120"
         height="120"
         alt="MDN logo — a dinosaur logo with the text MDN"

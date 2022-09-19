@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Quote from "./Quote/Quote";
 import NewQuote from "./NewQuote/NewQuote";
 
-// import Model1 from "../../assets/model1.png";
-// import Model2 from "../../assets/model2.png";
+import Model1 from "../../assets/model1.png";
+import Model2 from "../../assets/model2.png";
 
 import stickman from "../../assets/OBJ/stickman.obj";
 import bunny from "../../assets/OBJ/bunny.obj";
@@ -19,7 +19,7 @@ import "./GetQuote.css";
 const INITIAL_LIST_QUOTES = [
   {
     id: "1299302",
-    model: stickman,
+    model: Model1,
     date: Date(2022, 2, 2),
     autoQuoted: true,
     process: "FDM",
@@ -29,7 +29,7 @@ const INITIAL_LIST_QUOTES = [
   },
   {
     id: "122112",
-    model: bunny,
+    model: Model2,
     date: Date(2022, 12, 1),
     autoQuoted: false,
     process: "PBF",

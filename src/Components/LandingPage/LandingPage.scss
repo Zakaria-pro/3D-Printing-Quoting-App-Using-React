@@ -1,18 +1,7 @@
-body {
-  margin: 0;
-  background-color: #282c34;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "../../App.scss";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-/* Buttons */
 .page-background {
-  background-color: #1e252f;
+  background-color: $backgroundColor;
   background-image: url(../../assets/Shiny\ Overlay.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,7 +39,7 @@ code {
 .brand p {
   font-size: larger;
   font-weight: 300;
-  color: rgba(61, 63, 67, 0.8470588235);
+  color: #3d3f43d8;
 }
 
 .brand a {
@@ -60,14 +49,14 @@ code {
 
 .call-to-action button {
   transition: 500ms;
-  background-color: white;
-  color: #282c34;
+  background-color: $primaryButtonBackground;
+  color: $primaryButtonTextColor;
   border-color: white;
 }
 
 .call-to-action button:hover {
-  background-color: #282c34;
-  color: white;
+  background-color: $secondaryButtonBackground;
+  color: $secondaryButtonTextColor;
   border-color: white;
 }
 
@@ -112,28 +101,28 @@ code {
 
 .call-to-action-landing .main-button {
   transition: 500ms;
-  background-color: white;
-  color: #282c34;
+  background-color: $primaryButtonBackground;
+  color: $primaryButtonTextColor;
   border-color: white;
 }
 
 .call-to-action-landing .main-button:hover {
-  background-color: #282c34;
-  color: white;
+  background-color: $secondaryButtonBackground;
+  color: $secondaryButtonTextColor;
   border-color: white;
   border-radius: 4px;
 }
 
 .call-to-action-landing .secondary-button {
   transition: 500ms;
-  background-color: #282c34;
-  color: white;
+  background-color: $secondaryButtonBackground;
+  color: $secondaryButtonTextColor;
   border-color: white;
 }
 
 .call-to-action-landing .secondary-button:hover {
-  background-color: white;
-  color: #282c34;
+  background-color: $primaryButtonBackground;
+  color: $primaryButtonTextColor;
   border-color: white;
   border-radius: 4px;
 }
@@ -145,4 +134,4 @@ code {
 
 .quote-background {
   background-color: #eaeaea;
-}/*# sourceMappingURL=LandingPage.css.map */
+}

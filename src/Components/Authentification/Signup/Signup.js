@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import "./Login.css";
-import Card from "./../Common/Card";
-import PasswordInput from "./../Common/PasswordInput";
+import "./Signup.css";
+import Card from "../Common/Card";
+import PasswordInput from "../Common/PasswordInput";
 
-const Login = (props) => {
+const Signup = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
   const [authorized, setAuthorized] = useState(true);
@@ -29,10 +29,14 @@ const Login = (props) => {
     }
   };
 
+  const ChooseLogin = () => {
+    console.log("Choose Login");
+  };
+
   return (
     <Card>
       <div className="inside-container">
-        <header>Log in to your account</header>
+        <header>Create New Account</header>
         <form onSubmit={submitHandler}>
           <div className="user-input">
             <div className="input">
@@ -46,18 +50,25 @@ const Login = (props) => {
                 <p className="incorrect-credentials">Incorrect Credentials</p>
               )}
             </div>
+            <div className="input">
+              <p>Confirm Password: </p>
+              <PasswordInput onChange={passwordChangeHandler} />
+              {!authorized && (
+                <p className="incorrect-credentials">Incorrect Credentials</p>
+              )}
+            </div>
           </div>
-
-          <button type="submit">Login</button>
+          <button type="submit">Signup</button>
         </form>
         <p style={{ display: "flex", justifyContent: "center" }}>
-          New user ? &nbsp;{" "}
+          You have an account ? &nbsp;{" "}
           <a
             onClick={() => {
-              props.loginOrSignup("Signup");
+              ChooseLogin();
+              props.loginOrSignup("login");
             }}
           >
-            Sign up
+            Login
           </a>
         </p>
       </div>
@@ -65,4 +76,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default Signup;
