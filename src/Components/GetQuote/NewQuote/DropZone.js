@@ -39,7 +39,7 @@ const rejectStyle = {
 function DropzoneComponent(props) {
   const [textUpload, setTextUpload] = useState("Drag & Drop to Upload File");
   const [loadScreen, setLoadScreen] = useState(false);
-  const [fileName, setFileName] = useState("fileName");
+  const [fileName, setFileName] = useState();
 
   const onDrop = useCallback((acceptedFiles) => {
     setLoadScreen(true);
@@ -85,14 +85,6 @@ function DropzoneComponent(props) {
             <button>Browse File</button>
           </div>
         </div>
-
-        {/* {loadScreen && (
-          <div>
-            <Icon icon="eos-icons:bubble-loading" color="#4188e3" width={40} />
-            <h3>Processing of your quote ...</h3>
-            <p>Uploaded File: {fileName}</p>
-          </div>
-        )} */}
       </div>
     </div>
   );

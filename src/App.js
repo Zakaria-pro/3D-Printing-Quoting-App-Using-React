@@ -1,11 +1,5 @@
-import React, { useState, useContext, createContext } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -14,9 +8,9 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import GetQuote from "./Components/GetQuote/GetQuote";
 
 function App() {
-  const [authUser, setAuthUser] = useState(false);
+  // const [authUser, setAuthUser] = useState(false);
 
-  const PrivateRoute = (props) => {};
+  // const PrivateRoute = (props) => {};
 
   // authUser ? (
   //   <Route path="/quote" element={<GetQuote />}></Route>

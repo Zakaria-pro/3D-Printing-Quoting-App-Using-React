@@ -5,9 +5,6 @@ import NewQuote from "./NewQuote/NewQuote";
 
 import Model1 from "../../assets/model1.png";
 import Model2 from "../../assets/model2.png";
-
-import stickman from "../../assets/OBJ/stickman.obj";
-import bunny from "../../assets/OBJ/bunny.obj";
 import "./GetQuote.css";
 
 // Initial List Of Quotes
@@ -42,6 +39,7 @@ const INITIAL_LIST_QUOTES = [
 const GetQuote = () => {
   const [quotes, setQuotes] = useState(INITIAL_LIST_QUOTES);
 
+  var updatedList;
   function fileUploadHandler(uploadedFile) {
     const url = URL.createObjectURL(uploadedFile);
     var newQuote = {
@@ -50,7 +48,7 @@ const GetQuote = () => {
       date: Date(1999, 1, 2),
       model: url,
     };
-    var updatedList = [...quotes, newQuote];
+    updatedList = [...quotes, newQuote];
 
     setQuotes(updatedList);
   }
@@ -62,8 +60,8 @@ const GetQuote = () => {
     */
 
     if (componentState.componentStatus === "delete") {
-      var updatedList = quotes.filter((quote) => {
-        return quote.id != componentState.componenetId;
+      updatedList = quotes.filter((quote) => {
+        return quote.id !== componentState.componenetId;
       });
       setQuotes(updatedList);
     }
@@ -85,7 +83,7 @@ const GetQuote = () => {
         date: Date(1999, 1, 2),
       };
 
-      var updatedList = [...quotes, duplicateElement];
+      updatedList = [...quotes, duplicateElement];
       setQuotes(updatedList);
     }
   }
