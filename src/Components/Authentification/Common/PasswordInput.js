@@ -10,6 +10,7 @@ const PasswordInput = (props) => {
   return (
     <div className="pwd-container">
       <input
+        className={props.isMatched ? "match" : "not-match"}
         name="pwd"
         type={isRevealPwd ? "text" : "password"}
         onChange={props.onChange}

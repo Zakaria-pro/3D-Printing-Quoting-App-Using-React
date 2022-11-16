@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./Login.css";
+import "../Authentify.css";
 import Card from "./../Common/Card";
 import PasswordInput from "./../Common/PasswordInput";
 
@@ -8,6 +9,8 @@ const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
   const [authorized, setAuthorized] = useState(true);
+  const [match, setMatch] = useState(true);
+  const [loggedIn, setloggedIn] = useState(false);
 
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
@@ -22,10 +25,17 @@ const Login = (props) => {
     const enteredCredentials = {
       email: enteredEmail,
       password: enteredPassword,
+      id: Math.random().toString(),
     };
-    props.onSubmitLogin(enteredCredentials);
-    if (props.loggedIn === false) {
+    if (
+      enteredCredentials.email === "zhamedoun1@gmail.com" &&
+      enteredCredentials.password === "Hello"
+    ) {
+      setloggedIn(true);
+    }
+    if (loggedIn === false) {
       setAuthorized(false);
+      setMatch(false);
     }
   };
 
@@ -41,7 +51,10 @@ const Login = (props) => {
             </div>
             <div className="input">
               <p>Password: </p>
-              <PasswordInput onChange={passwordChangeHandler} />
+              <PasswordInput
+                onChange={passwordChangeHandler}
+                isMatched={match}
+              />
               {!authorized && (
                 <p className="incorrect-credentials">Incorrect Credentials</p>
               )}

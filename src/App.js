@@ -1,4 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext, createContext } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
 import "./App.css";
 
@@ -7,36 +14,31 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 import GetQuote from "./Components/GetQuote/GetQuote";
 
 function App() {
-  const [login, setLogin] = useState(false);
-  const [getQuote, setGetQuote] = useState(false);
+  const [authUser, setAuthUser] = useState(false);
 
-  const getQuoteClickHandler = () => {
-    setGetQuote(true);
-  };
+  const PrivateRoute = (props) => {};
 
-  const areYouLogin = (userExist) => {
-    if (userExist) {
-      setLogin(true);
-    } else {
-      setLogin(false);
-    }
-  };
+  // authUser ? (
+  //   <Route path="/quote" element={<GetQuote />}></Route>
+  // ) : (
+  //   <Route path="/login" element={<Authentify></Authentify>}></Route>
+  // );
 
   return (
-    <div className="App">
-      {/* Landing Page */}
-      {!getQuote && <LandingPage getQuoteHandler={getQuoteClickHandler} />}
-
-      {/* User click on Get Instant Quote but not logged in --> Login Page*/}
-      {getQuote && !login && (
-        // <Login onSubmitLogin={submitLoginHandler} loggedIn={login} />
-        <Authentify loggedIn={areYouLogin}></Authentify>
-      )}
-
-      {/* User Fill the login Form with correct credentials --> Quoting Page */}
-      {getQuote && login && <GetQuote />}
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/login" element={<Authentify />}></Route>
+          {/* <Route path="/quote" element={<PrivateRoute />}> */}
+          <Route path="/quote" element={<GetQuote />}></Route>
+          {/* </Route> */}
+        </Routes>
+      </div>
+    </Router>
   );
+
+  // authUser ? props.element :
 }
 
 export default App;

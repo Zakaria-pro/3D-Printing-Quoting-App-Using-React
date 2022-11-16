@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./LandingPage.css";
 import Image from "../../assets/Saly-21.png";
@@ -9,22 +10,24 @@ const LandingPage = (props) => {
   return (
     <div className="page-background">
       <div className="App-container">
-        <div className="App-header">
+        <header className="App-header">
           <div className="brand">
-            <header className="header-brand">Kelvin.</header>
+            <header className="header-brand">IQ</header>
             <p> | </p>
             <a>Home</a>
             <a>About Quoting</a>
             <a> Become Partner</a>
           </div>
           <div className="call-to-action">
-            <button className="button-style" onClick={props.getQuoteHandler}>
-              Get Instant Quote
-            </button>
+            <Link to="/quote">
+              <button className="button-style" onClick={props.getQuoteHandler}>
+                Get Instant Quote
+              </button>
+            </Link>
           </div>
-        </div>
+        </header>
 
-        <div className="App-content">
+        <section className="App-content">
           <div className="left">
             <div className="header-sub">
               <h1 className="header-style">
@@ -41,11 +44,11 @@ const LandingPage = (props) => {
             </div>
           </div>
           <div className="canvas-container">
-            {/* <img className="image-style" alt="saly" src={Image} /> */}
             <CanvasComponent />
           </div>
-        </div>
-        <div className="App-footer"></div>
+        </section>
+
+        <footer className="App-footer"></footer>
       </div>
     </div>
   );

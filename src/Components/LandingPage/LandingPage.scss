@@ -127,10 +127,13 @@
   border-radius: 4px;
 }
 
-.canvas-container {
-  width: 50%;
-  height: 80vh;
-}
+// @media only screen and (max-width: 600px) {
+//   .canvas-container {
+//     display: none;
+//     width: 50%;
+//     height: 80vh;
+//   }
+// }
 
 .quote-background {
   background-color: #eaeaea;
