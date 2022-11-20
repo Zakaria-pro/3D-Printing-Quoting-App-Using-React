@@ -6,6 +6,7 @@ import "./App.css";
 import Authentify from "./Components/Authentification/Authentify";
 import LandingPage from "./Components/LandingPage/LandingPage";
 import GetQuote from "./Components/GetQuote/GetQuote";
+import StoreContainer from "./Components/Store/StoreContainer";
 
 function App() {
   // const [authUser, setAuthUser] = useState(false);
@@ -22,8 +23,15 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<LandingPage />}></Route>
-          <Route path="/login" element={<Authentify />}></Route>
+          <Route
+            path="/"
+            element={
+              <div>
+                <LandingPage /> <StoreContainer />
+              </div>
+            }
+          ></Route>
+          {/* <Route path="/login" element={<Authentify />}></Route> */}
           {/* <Route path="/quote" element={<PrivateRoute />}> */}
           <Route path="/quote" element={<GetQuote />}></Route>
           {/* </Route> */}

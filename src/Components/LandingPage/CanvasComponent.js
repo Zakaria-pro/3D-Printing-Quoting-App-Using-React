@@ -35,6 +35,7 @@ function Box(props) {
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}
     >
+      {/* <sphereGeometry  /> */}
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={hovered ? "#EAE" : "orange"} />
     </mesh>
@@ -47,7 +48,7 @@ const CanvasComponent = (props) => {
 
   return (
     <Suspense fallback={<Loader />}>
-      <Canvas>
+      <Canvas className="canvas">
         <ambientLight />
         <OrbitControls />
         <pointLight position={[10, 10, 10]} />
