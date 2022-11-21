@@ -12,11 +12,11 @@ const LandingPage = (props) => {
       <div className="App-container">
         <header className="App-header">
           <div className="brand">
-            <header className="header-brand">IQ</header>
+            <header className="header-brand">3DP</header>
             <p> | </p>
-            <a>Home</a>
-            <a>About Quoting</a>
-            <a> Become Partner</a>
+            <a href="#home">Home</a>
+            <a href="#about">3D Printing</a>
+            <a href="#contact"> Contact us</a>
           </div>
           <div className="call-to-action">
             <Link to="/quote">
@@ -31,16 +31,15 @@ const LandingPage = (props) => {
           <div className="left">
             <div className="header-sub">
               <h1 className="header-style">
-                Get Your <br /> Instant Quote
+                Shop Useful <br /> 3D Printed Parts Now
               </h1>
               <h3 className="sub-header-style">
-                The new toolpath simulator and corrector <br /> that brings AI
-                directly to you
+                get you 3D printed part in less than 24 hour <br />
               </h3>
             </div>
             <div className="call-to-action-landing">
-              <button className="main-button">Try for free</button>
-              <button className="secondary-button">Contact us</button>
+              <button className="secondary-button">Upload your own</button>
+              <button className="main-button ">Shop now</button>
             </div>
           </div>
           <div className="canvas-container">
